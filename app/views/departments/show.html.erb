@@ -1,0 +1,11 @@
+<h1><%= @dep.dep_name%></h1>
+<hr />
+
+<p>What would you like to do?</p>
+<%= link_to "View Item Inventory", department_items_path(@dep) %>
+<br />
+<%= link_to "Return to Department Stores", departments_path%>
+<br />
+<%= link_to "Edit Store Name", edit_department_path(@dep) %>
+<br />
+<%= link_to "Evacuate Department from Store", @dep, method: :delete %>

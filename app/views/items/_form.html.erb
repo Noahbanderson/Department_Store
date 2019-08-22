@@ -1,0 +1,14 @@
+<h1><%=@item.id ? "Edit Item" : "New Item" %></h1>
+<hr />
+<%=form_for [@dep, @item] do |f|%>
+    <%=f.label :item_name  %>
+    <%=f.text_field :item_name, required: true, autofocus: true   %>
+  <br />
+    <%=f.label :value  %>
+    <%=f.text_field :value, required: true  %>
+  <br />
+    <%=f.label "Department" %>
+    <%=f.text_field :brand %>
+    <%=f.submit %>
+
+<%end%>

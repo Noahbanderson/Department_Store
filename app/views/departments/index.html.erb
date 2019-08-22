@@ -1,0 +1,11 @@
+<h1>Departments Stores</h1>
+<h3><%= @deps.length === 0 ? "Store is vacant" : "" %></h3>
+
+
+<ul>
+<% @deps.each do |dep| %>
+<li><%=link_to dep.dep_name, department_path(dep)%></li>
+<%end%>
+</ul>
+<br/>
+<%= link_to "Create new Department", new_department_path %>

@@ -1,0 +1,10 @@
+<h1>Click an Item for Details</h1>
+<ol>
+    <%@items.each do |item|%>
+        <li><%=link_to item.item_name, department_item_path(@dep, item)%></li>
+    <%end%>
+</ol>
+<br/>
+<%=link_to "Create new item", new_department_item_path(@dep)%>
+<%=link_to "Back to Departments", departments_path%>
+
